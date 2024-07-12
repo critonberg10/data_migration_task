@@ -1,0 +1,16 @@
+[
+    {
+        "name": "constellation global",
+        "industry": "workforce",
+        "website": "constellation-global.com",
+        "employee count": 1,
+        "country": "UK"
+    },
+    {
+        "name": "work labs",
+        "industry": "software",
+        "website": "worklabs.com.ng",
+        "employee count": 1,
+        "country": "Nigeria"
+    }
+]

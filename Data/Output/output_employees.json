@@ -1,0 +1,34 @@
+[
+    {
+        "First Name": "John",
+        "Last Name": "Doe",
+        "Gender": "male",
+        "Birthday": "2024-12-07",
+        "email": "john@yahoomail.com",
+        "residential address": "1, cosgroove drive, new layout, Enugu",
+        "Contact": 23412348693,
+        "Country": "Nigeria",
+        "start date": "2024-12-07",
+        "end date": "2024-12-07",
+        "Role": "software developer",
+        "Probation (weeks)": 1,
+        "salary": 5890128.12,
+        "Employer": "constellation global"
+    },
+    {
+        "First Name": "Jane ",
+        "Last Name": "Doe",
+        "Gender": "female",
+        "Birthday": "2024-12-07",
+        "email": "jane@gmail.com",
+        "residential address": "43, house roud, jane cresecnt, accra",
+        "Contact": 23389123470,
+        "Country": "Ghana",
+        "start date": "2024-12-07",
+        "end date": "2024-12-07",
+        "Role": "pilot",
+        "Probation (weeks)": 4,
+        "salary": 232112312.0,
+        "Employer": "work labs"
+    }
+]
