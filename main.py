@@ -34,7 +34,8 @@ def insert_json_to_mongodb(json_file, collection):
     """Inserts data from a JSON file into a MongoDB collection."""
     with open(json_file, "r") as file:
         data = json.load(file)
-        collection.insert_many(data)
+        result = collection.insert_many(data)
+        return len(result.inserted_ids)
 
 
 
@@ -42,7 +43,7 @@ def insert_json_to_mongodb(json_file, collection):
 if __name__ == "__main__":
         try:
             # Create MongoDB URI
-            mongo_uri = f"mongodb+srv://{USERNAME}:{PASSWORD}@{CLUSTER_URL}/?retryWrites=true&w=majority&appName=DM-Cluster"
+            mongo_uri = f"mongodb+srv://{USERNAME}:{PASSWORD}@{CLUSTER_URL}/?retryWrites=true&w=majority&appName=Data_Migration"
 
             # Create a new client and connect to the server
             client = MongoClient(mongo_uri, server_api=ServerApi('1'))
@@ -70,9 +71,12 @@ if __name__ == "__main__":
             print("Excel files have been successfully converted to JSON.")
 
             # Insert JSON data into MongoDB
-            insert_json_to_mongodb(OUTPUT_FILE_EMPLOYERS, employers_collection)
-            insert_json_to_mongodb(OUTPUT_FILE_EMPLOYEES, employees_collection)
-            print("JSON data has been successfully imported into MongoDB collections.")
+            count_employers = insert_json_to_mongodb(OUTPUT_FILE_EMPLOYERS, employers_collection)
+            count_employees = insert_json_to_mongodb(OUTPUT_FILE_EMPLOYEES, employees_collection)
+
+            print(f"{count_employers} JSON records have been successfully imported into the Employers MongoDB collection.")
+            print(f"{count_employees} JSON records have been successfully imported into the Employees MongoDB collection.")
+
 
         except Exception as e:
             print(f"An error occurred: {e}")
