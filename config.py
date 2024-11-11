@@ -9,3 +9,4 @@ OUTPUT_FILE_EMPLOYERS = "Data/Output/output_employers.json"
 
 
 uri = "mongodb+srv://ifeanyi:<password>@dm-cluster.anamhpb.mongodb.net/?retryWrites=true&w=majority&appName=DM-Cluster"
+
